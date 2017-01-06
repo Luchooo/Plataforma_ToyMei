@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='css/onsen-css-components-default.css')
+    link(rel='stylesheet', href='css/login.css')
+    link(rel='manifest', href='manifest.json')
+    title!= titulo
+  body.page
+    .navigation-bar
+      .navigation-bar__item.left.quarter.float-left
+      .navigation-bar__item.full.float-left.text-centering
+        span.navigation-bar__title.navigation-bar__line-height.float-left
+          strong 
+          !=titulo
+      .navigation-bar__item.right.quarter.float-left
+        span.icon-button--quiet.navigation-bar__line-height.font-weight-500
+    .main-image-wrapper
+      img(src='img/icon.png')
+    form(action='/login', method='POST')
+      div#errorMsg(align='center')
+          !=error
+      input#user.text-input--underbar(type='email', placeholder='Nombre de Usuario', value = '#{(usuario) ? usuario : ""}', name='username', autocomplete='off')
+      input#pass.text-input--underbar(type='password', placeholder='Contraseña', value='', name='password')
+      br
+      button.button.login-button Ingresar
+    br
+    div(align='center')
+      p.p
+        a.link(href='/olvido_contrasena') ¿Olvidaste tu contraseña?
+
+    

@@ -1,0 +1,57 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='google', value='notranslate')
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='icon', href='img/favicon.ico', type='image/x-icon')
+    title!= titulo
+    link(rel='stylesheet', type='text/css', href='css/estilos_menu.css')
+  
+  body
+    br
+    head
+    
+    center
+        span.titulo #{titulo}
+    #titulo #{usuario}
+    a(href='/change_password')
+        img.iconHeader#config(src='img/config3.png' border = "0")
+    a(href='/logout')
+        img.iconHeader#logout(src='img/exit.png' border = "0")
+    hr
+    br
+    br
+    br
+    br  
+    #container
+      #content
+        .circle
+          a(href='/Reportes')
+            img(src='img/VerReportes.png')
+            .header
+              h3 Ver Reportes
+            .text
+              p Podrás visualizar,descargar o enviar reportes de tus pacientes.
+        .circle
+          a(href='/AsignarEjercicio')
+            img(src='img/AsignarEjercicio.png')
+            .header
+              h3 Asignar Ejercicio
+            .text
+              p Configurar un ejercicio y editarlo si deseas.
+        
+        .circle
+          a(href='/Mostrar_vista_pacientes')
+            img(src='img/Pacientes.png')
+            .header
+                  h3 Agregar Paciente
+                .text
+                  p Registrar a tus pacientes, si lo deseas podras editarlos en cualquier momento. 
+            
+            
+
+      
+    
+
+    

@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='google', value='notranslate')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    meta(name='mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+    link(rel='icon', href='img/favicon.ico', type='image/x-icon')
+    link(rel='manifest', href='manifest.json')
+    title!= titulo
+  body.page
+    .loading
+    .navigation-bar
+      .navigation-bar__item.left.quarter.float-left
+      .navigation-bar__item.full.float-left.text-centering
+        span.navigation-bar__title.navigation-bar__line-height.float-left
+          strong ¿Olvidaste tu contraseña?
+      .navigation-bar__item.right.quarter.float-left
+        span.icon-button--quiet.navigation-bar__line-height.font-weight-500
+    .main-image-wrapper
+      img(src='img/olvido_contrasena.png')
+    
+      div#errorMsg(align='center')
+        !=error
+      input#correo.text-input--underbar(type='text', required, placeholder='Introduce un correo electrónico', value = '#{(data[1]) ? data[1] : ""}', name='correo', autocomplete='off')
+      br
+      button#enviar.button.login-button Enviar
+      div(align='center')
+        br
+        p.p
+        a.link(href='/login') Autenticarme
+    br
+    link(rel='stylesheet', href='css/font-awesome.min.css')
+    link(rel='stylesheet', href='css/onsen-css-components-default.css')
+    link(rel='stylesheet', href='css/login.css')
+    link(rel='stylesheet', type='text/css', href='css/sweetalert.css')
+    script(src='js/sweetalert.min.js')
+    script(src='js/jquery-1.11.3.min.js')
+    script(src='js/modernizr.js')
+    script(src='js/olvido_contrasena.js')

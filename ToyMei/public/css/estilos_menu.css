@@ -1,0 +1,192 @@
+body
+{
+	background: #2E3740;
+	color: #ec3030;
+	font-family: "Open Sans", sans-serif;
+}
+
+a{
+	color: #2e3740;
+}
+
+img
+{
+	cursor: pointer;
+}
+
+
+
+
+.titulo
+{
+	color: white;
+	font-weight: bold;
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px black;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+hr
+{
+	border: 1px solid #435160;
+}
+
+
+
+
+#titulo
+{
+	margin: 15px;
+	float: left;
+	padding-left: 5px;
+	width: 88%;
+	color: white;
+	font-size: 1.5em
+}
+
+
+#logout
+{
+	padding-right: 5px;
+	padding-left: 5px;
+
+}
+
+
+#config
+{
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-right: 1%;
+}
+
+
+
+.iconHeader
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid white;
+	border-radius: 50%;
+
+}
+
+
+#VerReportes
+{
+	margin-left: 4%;
+	display: inline-block;
+	width: 30%;
+	text-align: center;
+}
+#AsignarEjercicio
+{
+	display: inline-block;
+	width: 30%;
+	text-align: center;
+}
+
+
+.tamano_imagenes
+{
+	width: 250px;
+	height: 250px;
+}
+
+
+
+#container {
+  
+  max-width: 100%;
+  margin: 10px auto;
+  padding: 0;
+  background: #2E3740;
+  overflow: hidden;
+}
+
+#content {
+  
+  overflow: hidden;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  float: left;
+  margin: 10px;
+  padding: 0;
+  position: relative;
+  background: #cccccc;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 10%;
+  cursor:pointer;
+}
+
+.circle .header {
+  width: 250px;
+  height: 250px;
+  top: -250px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 100px 100px 0 0;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.circle:hover .header {
+  top: 0;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
+  box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
+}
+
+.header h3 {
+  font-size: 20px;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+  padding-bottom: 5px;
+  border-bottom: 3px double #2E3740;
+}
+
+.circle .text {
+  width: 250px;
+  height: 100px;
+  color: #2E3740;
+  top: 250px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 0 0 100px 100px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.circle:hover .text {
+  top: 110px;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
+  box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
+}
+
+.text p {
+  margin: 10px;
+  text-align: center;
+}
+
+
+
+
+

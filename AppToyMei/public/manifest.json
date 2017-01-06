@@ -1,0 +1,21 @@
+{
+  "short_name": "AppToyMei",
+  "name": "AppToyMei by 2Soft",
+  "start_url": "../",
+  "icons": [
+    {
+       "src": "img/icono2.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    },
+    {
+       "src": "img/icono2.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }
+  ],
+  "background_color": "#FFFFFF",
+  "theme_color": "#AA0F0F",
+   "display": "fullscreen",
+  "orientation": "portrait"
+}

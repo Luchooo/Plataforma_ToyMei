@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='google', value='notranslate')
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='icon', href='img/favicon.ico', type='image/x-icon')
+    title!= titulo
+    link(rel='stylesheet', type='text/css', href='css/tabla.css')
+    link(rel='stylesheet', type='text/css', href='css/form.css')
+    link(rel='stylesheet', type='text/css', href='css/sweetalert.css')
+ 
+    script(src='js/sweetalert.min.js')
+    script(src='js/jquery-1.11.3.min.js')
+    script(src='js/registrar_pacientes.js')
+    script(src='js/modernizr.js')
+
+  body
+    br
+    head
+    .se-pre-con
+    
+    center
+        span.titulo #{titulo}
+        #ButtonHeader
+            a(href='/')
+                  img#atras.iconHeader(src='img/Atras.png', border='0')
+            
+        #titulo #{usuario}
+    hr
+    br
+    #cajon1
+      form#form(action='/createRegistro123', method='POST')
+        input#identifica(type='number', placeholder='Cédula',  autocomplete='off', name='identifica', min="1")
+        script.
+          function soloLetras(e) {
+          key = e.keyCode || e.which;
+          tecla = String.fromCharCode(key).toLowerCase();
+          letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+          especiales = [];
+          tecla_especial = false
+          for(var i in especiales) {
+          if(key == especiales[i]) {
+          tecla_especial = true;
+          break;
+          }
+          }
+          if(letras.indexOf(tecla) == -1 && !tecla_especial)
+          return false;
+          }
+          
+        input#nombre(type='text', placeholder='Nombre', autocomplete='off', name='nombre' , onkeypress='return soloLetras(event)')
+        input#apellido(type='text', placeholder='Apellido', autocomplete='off', name='apellido',onkeypress='return soloLetras(event)')
+        input#email(type='email', placeholder='Email', autocomplete='off', name='email')
+        input#fechanace(type='date', placeholder='Fecha Nacimiento', name='fechanace' min='', max='')
+        button#guarda Guardar Usuario
+       
+    #cajon2
+      input#buscar(type='search', placeholder='Buscar paciente',  autocomplete='off', name='buscar')
+      br
+      br
+      br  
+      #imprime

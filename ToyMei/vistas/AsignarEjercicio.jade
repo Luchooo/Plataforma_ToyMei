@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='google', value='notranslate')
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='icon', href='img/favicon.ico', type='image/x-icon')
+    title!= titulo
+    link(rel='stylesheet', type='text/css', href='css/AsignarEjercicio.css')
+    link(rel='stylesheet', type='text/css', href='css/sweetalert.css')
+    link(rel='stylesheet', type='text/css', href='css/swal/sweetalert2.min.css')
+    link(rel='stylesheet', type='text/css', href='css/Animate/animate.css')
+ 
+    script(src='js/swal/sweetalert2.min.js')
+    script(src='js/jquery-1.11.3.min.js')
+    script(src='js/modernizr.js')
+    script(src='js/asignar_ejercicio.js')
+
+
+
+
+  body
+    br
+    head
+    .se-pre-con
+    
+    center
+        span.titulo #{titulo}
+        #ButtonHeader
+            a(href='/')
+              img#atras.iconHeader(src='img/Atras.png', border='0')
+            
+            a#help
+              img.iconHeader#mic(src='img/help2.png')
+
+    #titulo #{usuario}
+        hr
+        form  
+          select#Opciones
+            option#TipoEjercicio(name='TipoEjercicio', value='', disabled='', selected='') Selecciona opcion
+            option(value = "opcion1" ) Ejercicio
+            option(value = "opcion2" ) Estiramiento
+          input#NombreEjercicio(name='NombreEjercicio', type='text', placeholder='Nombre del ejercicio')
+          input#tiempoEjercicio(name='tiempoEjercicio', type='number', min='60', placeholder='Tiempo en segundos')
+          input#repeticionesEjercicio(name='repeticionesEjercicio', type='number', placeholder='Número de repeticiones')
+          hr
+
+    
+    br
+    #contenido
+      input#buscar(type='search', placeholder='Buscar paciente',  autocomplete='off', name='buscar')
+      #todos
+
+    #cajon2  
+      iframe#cubos(src='/vista_cubos', frameborder='0', allowfullscreen='')
+        input#txt2(type='text', name='txt2')
+    #cajon3
+     button#edita_ejercicio Editar Ejercicios
+     button#guarda Asignar Ejercicio
+
+     
+
+   

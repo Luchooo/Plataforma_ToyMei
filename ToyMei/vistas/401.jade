@@ -1,0 +1,35 @@
+doctype html
+//
+  Copyright (c) 2016 by Marco Biedermann (http://codepen.io/marcobiedermann/pen/WbGazL)
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+html
+  head
+    meta(charset='UTF-8')
+    link(rel='icon', href='img/favicon.ico', type='image/x-icon')
+    title ERROR 401 - Acceso no autorizado
+    link(rel='stylesheet', href='css/Acceso no autorizado/401.css')
+  body
+    html(lang='en')
+      head
+        meta(charset='UTF-8')
+        title Error 401 - Acceso no autorizado
+        link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:300,900')
+        link(rel='stylesheet')
+      body.page-404
+        .container
+          .message.animated.bounceIn
+            .display-table
+              .display-table-cell
+                svg.icon.icon-left.icon-x
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon-x')
+              .display-table-cell
+                h1 Error 401
+                h2 Acceso no autorizado!
+        svg.icons(viewbox='0 0 100 100', xmlns='http://www.w3.org/2000/svg')
+          symbol#icon-x(viewbox='0 0 512 512')
+            title x
+            path(d='M438.393 374.595L319.757 255.977l118.62-118.63-63.782-63.74-118.6 118.618-118.62-118.603-63.768 63.73 118.64 118.63L73.62 374.626l63.73 63.768 118.65-118.66 118.65 118.645z')
+    script.
+      setTimeout(function(){ window.location = "/"; }, 2000);
